@@ -15,9 +15,9 @@ app.use(express.json());
 
 // Routes
 app.use('/api/auth', authRoutes);
-// app.use('/api', (req, res) => {
-//   res.write("Hello Bangladesh")
-//   });
+app.use('/', (req, res) => {
+  res.write("Hello Bangladesh")
+  });
 
 // Connect to MongoDB
 connectDB();
